@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "556747880581",
+    "project_id": "docki-f4f61",
+    "storage_bucket": "docki-f4f61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556747880581:android:4b31c22150d3804610d1ec",
+        "android_client_info": {
+          "package_name": "com.docki.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556747880581-eo2bdn6jnqbsh06lj235idhsjs0au8hs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnzu1cY_CZmpUzO2cXIqJccypDmz2PFFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556747880581-eo2bdn6jnqbsh06lj235idhsjs0au8hs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
