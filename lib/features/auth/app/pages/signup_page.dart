@@ -20,7 +20,7 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  VideoPlayerController? _playerController;
+  // VideoPlayerController? _playerController;
   final nameTextController = TextEditingController();
   final emailTextController = TextEditingController();
   final phoneTextController = TextEditingController();
@@ -36,15 +36,15 @@ class _SignupPageState extends State<SignupPage> {
   void initState() {
     super.initState();
 
-    _playerController = VideoPlayerController.asset('assets/intro.mp4',
-        videoPlayerOptions: VideoPlayerOptions())
-      ..initialize().then(
-        (value) {
-          _playerController?.play();
-          _playerController?.setLooping(true);
-          setState(() {});
-        },
-      );
+    // _playerController = VideoPlayerController.asset('assets/intro.mp4',
+    //     videoPlayerOptions: VideoPlayerOptions())
+    //   ..initialize().then(
+    //     (value) {
+    //       _playerController?.play();
+    //       _playerController?.setLooping(true);
+    //       setState(() {});
+    //     },
+    //   );
   }
 
   @override
@@ -93,19 +93,19 @@ class _SignupPageState extends State<SignupPage> {
               child: Stack(
                 alignment: Alignment.center,
                 children: [
-                  Opacity(
-                    opacity: 0.2,
-                    child: SizedBox.expand(
-                      child: FittedBox(
-                        fit: BoxFit.cover,
-                        child: SizedBox(
-                          height: _playerController?.value.size.height,
-                          width: _playerController!.value.size.width,
-                          child: VideoPlayer(_playerController!),
-                        ),
-                      ),
-                    ),
-                  ),
+                  // Opacity(
+                  //   opacity: 0.2,
+                  //   child: SizedBox.expand(
+                  //     child: FittedBox(
+                  //       fit: BoxFit.cover,
+                  //       child: SizedBox(
+                  //         height: _playerController?.value.size.height,
+                  //         width: _playerController!.value.size.width,
+                  //         child: VideoPlayer(_playerController!),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                   SingleChildScrollView(
                     child: SizedBox(
                       width: 350.0,
@@ -279,7 +279,7 @@ class _SignupPageState extends State<SignupPage> {
 
   @override
   void dispose() {
-    _playerController?.dispose();
+    // _playerController?.dispose();
     super.dispose();
   }
 }

@@ -19,7 +19,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  VideoPlayerController? _playerController;
+  // VideoPlayerController? _playerController;
   final emailTextController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -31,15 +31,15 @@ class _LoginPageState extends State<LoginPage> {
   void initState() {
     super.initState();
 
-    _playerController = VideoPlayerController.asset('assets/intro.mp4',
-        videoPlayerOptions: VideoPlayerOptions())
-      ..initialize().then(
-        (value) {
-          _playerController?.play();
-          _playerController?.setLooping(true);
-          setState(() {});
-        },
-      );
+    // _playerController = VideoPlayerController.asset('assets/intro.mp4',
+    //     videoPlayerOptions: VideoPlayerOptions())
+    //   ..initialize().then(
+    //     (value) {
+    //       _playerController?.play();
+    //       _playerController?.setLooping(true);
+    //       setState(() {});
+    //     },
+    //   );
   }
 
   @override
@@ -86,19 +86,19 @@ class _LoginPageState extends State<LoginPage> {
               child: Stack(
                 alignment: Alignment.center,
                 children: [
-                  Opacity(
-                    opacity: 0.2,
-                    child: SizedBox.expand(
-                      child: FittedBox(
-                        fit: BoxFit.cover,
-                        child: SizedBox(
-                          height: _playerController?.value.size.height,
-                          width: _playerController!.value.size.width,
-                          child: VideoPlayer(_playerController!),
-                        ),
-                      ),
-                    ),
-                  ),
+                  // Opacity(
+                  //   opacity: 0.2,
+                  //   child: SizedBox.expand(
+                  //     child: FittedBox(
+                  //       fit: BoxFit.cover,
+                  //       child: SizedBox(
+                  //         height: _playerController?.value.size.height,
+                  //         width: _playerController!.value.size.width,
+                  //         child: VideoPlayer(_playerController!),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                   SingleChildScrollView(
                     child: SizedBox(
                       width: 350.0,
@@ -260,7 +260,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void dispose() {
-    _playerController?.dispose();
+    // _playerController?.dispose();
     super.dispose();
   }
 }
